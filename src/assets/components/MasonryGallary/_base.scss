@@ -1,0 +1,35 @@
+//  Core
+.masonry_item_wrapper {
+  position: relative;
+  margin-bottom: $spacer;
+  border-radius: $border-radius;
+}
+.masonry_item_wrapper:hover {
+  box-shadow: $box-shadow-layout-bottom;
+}
+.masonry_item_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: $border-radius;
+  padding: 10px;
+  background: linear-gradient(180deg, transparent 0, rgba(0, 0, 0, 0.4));
+  opacity: 0;
+  transition-delay: 0s;
+  transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  transition-duration: 0.2s;
+}
+.masonry_item_content:hover {
+  opacity: 1;
+}
+
+.masonry_item_image {
+  border-radius: $border-radius;
+  display: block;
+  width: 100%;
+}

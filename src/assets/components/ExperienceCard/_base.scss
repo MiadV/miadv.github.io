@@ -1,0 +1,17 @@
+.experienceCard {
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+  }
+  .dateContainer {
+    display: block;
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+  .dateSm {
+    display: none;
+    @include media-breakpoint-down(sm) {
+      display: block;
+    }
+  }
+}

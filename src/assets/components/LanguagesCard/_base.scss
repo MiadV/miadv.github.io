@@ -1,0 +1,13 @@
+.languagesCard {
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+  }
+
+  .flexTable {
+    display: flex;
+    @include media-breakpoint-down(sm) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
