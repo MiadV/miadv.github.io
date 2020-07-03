@@ -2,11 +2,11 @@ import React from 'react';
 // Mui
 import Grid from '@material-ui/core/Grid';
 // Components
-import Experiences from '../../components/Experiences';
-import Education from '../../components/Education';
-import Languages from '../../components/Languages';
-import Skills from '../../components/Skills';
-import AboutMe from '../../components/AboutMe';
+import Experiences from '../../components/CV/Experiences';
+import Education from '../../components/CV/Education';
+import Languages from '../../components/CV/Languages';
+import Skills from '../../components/CV/Skills';
+import AboutMe from '../../components/CV/AboutMe';
 
 const CV = () => {
   return (

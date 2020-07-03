@@ -10,8 +10,8 @@ import Tabs from '@material-ui/core/Tabs';
 import HeroSection from '../../components/HeroSection';
 import ProfileCard from '../../components/ProfileCard';
 import CV from './CV';
-import Websites from './Websites';
-import Graphics from './Graphics';
+import Projects from './Projects';
+import Gallary from './Gallary';
 
 const Home = () => {
   const [currentTab, setCurrentTab] = useState(0);
@@ -38,8 +38,8 @@ const Home = () => {
               variant="fullWidth"
               onChange={handleTabChange}>
               <Tab label="CV" />
-              <Tab label="Websites" />
-              <Tab label="Graphics" />
+              <Tab label="Projects" />
+              <Tab label="Gallary" />
             </Tabs>
           </Card>
           {/* CV */}
@@ -47,10 +47,10 @@ const Home = () => {
             <CV />
           </TabPanel>
           <TabPanel value={currentTab} index={1} className="my-3">
-            <Websites />
+            <Projects />
           </TabPanel>
           <TabPanel value={currentTab} index={2} className="my-3">
-            <Graphics />
+            <Gallary />
           </TabPanel>
         </Grid>
       </Grid>
