@@ -22,7 +22,7 @@ const AboutMe = () => {
                 </div>
                 <div className="flexTable">
                   <span className="font-weight-bold mr-1">Nationality:</span>
-                  <span className="text-black-50">Irannian</span>
+                  <span className="text-black-50">Iranian</span>
                 </div>
               </div>
               <div className="flexTable">
