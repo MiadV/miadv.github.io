@@ -1,4 +1,8 @@
 import React from 'react';
+import {
+  default as SimpleReactLightbox,
+  SRLWrapper
+} from 'simple-react-lightbox';
 // Mui
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
@@ -71,45 +75,47 @@ const EdenScent = () => {
               .
             </p>
           </div>
+          <SimpleReactLightbox>
+            <SRLWrapper>
+              <Grid container spacing={3} className="my-3">
+                <Grid item sm={4}>
+                  <a
+                    href="#/"
+                    onClick={(e) => e.preventDefault()}
+                    className="card-img-wrapper rounded">
+                    <img
+                      alt="edenscent"
+                      className="card-img-top rounded shadow-sm"
+                      src={require('../../../assets/images/projects/edenscent/EdenScent-Home.png')}
+                      style={{
+                        maxHeight: 100,
+                        objectFit: 'cover',
+                        objectPosition: 'top'
+                      }}
+                    />
+                  </a>
+                </Grid>
 
-          <Grid container spacing={3} className="my-3">
-            <Grid item sm={4}>
-              <a
-                href="#/"
-                onClick={(e) => e.preventDefault()}
-                className="card-img-wrapper rounded">
-                <img
-                  alt="edenscent"
-                  className="card-img-top rounded shadow-sm"
-                  src={require('../../../assets/images/projects/edenscent/EdenScent-Home.png')}
-                  style={{
-                    maxHeight: 100,
-                    objectFit: 'cover',
-                    objectPosition: '0%  0%'
-                  }}
-                />
-              </a>
-            </Grid>
-
-            <Grid item sm={4}>
-              <a
-                href="#/"
-                onClick={(e) => e.preventDefault()}
-                className="card-img-wrapper rounded">
-                <img
-                  alt="edenscent"
-                  className="card-img-top rounded shadow-sm"
-                  src={require('../../../assets/images/projects/edenscent/EdenScent-ProductPage.png')}
-                  style={{
-                    maxHeight: 100,
-                    objectFit: 'cover',
-                    objectPosition: '0%  0%'
-                  }}
-                />
-              </a>
-            </Grid>
-          </Grid>
-
+                <Grid item sm={4}>
+                  <a
+                    href="#/"
+                    onClick={(e) => e.preventDefault()}
+                    className="card-img-wrapper rounded">
+                    <img
+                      alt="edenscent"
+                      className="card-img-top rounded shadow-sm"
+                      src={require('../../../assets/images/projects/edenscent/EdenScent-ProductPage.png')}
+                      style={{
+                        maxHeight: 100,
+                        objectFit: 'cover',
+                        objectPosition: 'top'
+                      }}
+                    />
+                  </a>
+                </Grid>
+              </Grid>
+            </SRLWrapper>
+          </SimpleReactLightbox>
           <div className="mt-3">
             <span className="text-first mx-1 my-1 badge badge-neutral-first badge-pill">
               WordPress

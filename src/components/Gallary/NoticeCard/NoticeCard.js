@@ -29,29 +29,8 @@ const NoticeCard = () => {
             <LightbulbOnOutline />
           </span>
           <p className="font-size-md mb-3">
-            all WordPress based websites have been pentested using{' '}
-            <a
-              href="https://wpscan.org/"
-              title="WordPress Security Scanner"
-              className="font-weight-bold">
-              WPScan
-            </a>{' '}
-            on linux and{' '}
-            <a
-              href="https://www.acunetix.com/"
-              title="Find, Fix, and Prevent Vulnerabilities"
-              className="font-weight-bold">
-              Acunetix
-            </a>{' '}
-            and are constantly monitored using{' '}
-            <a
-              href="https://www.wordfence.com/"
-              title="Protect your websites with the best WordPress security available"
-              className="font-weight-bold">
-              Wordfence plugin
-            </a>{' '}
-            and login page is secured by <strong>2FA Authentication</strong>.
-            This list is limited to currently live projects only
+            These are some of my photo editing works which includes Product
+            Photo Editing, Social Media Posts, Photo Retouching etc...
           </p>
         </div>
       </Card>

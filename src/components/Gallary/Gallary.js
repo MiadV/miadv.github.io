@@ -1,47 +1,33 @@
-import React, { Fragment, useState } from 'react';
-import InfiniteScroll from 'react-infinite-scroll-component';
+import React, { Fragment } from 'react';
+import {
+  default as SimpleReactLightbox,
+  SRLWrapper
+} from 'simple-react-lightbox';
 // components
 import MasonryGallary from './components/MasonryGallary';
 import GallaryItem from './components/MasonryGallary/GallaryItem';
-// gallaru array
+// gallary array
 import { gallary } from './data';
 
 const ProfileGallary = () => {
-  const [hasMore, setHasMore] = useState(true);
-  const [items, setItems] = useState(gallary);
-
-  const fetchMoreData = () => {
-    if (items.length >= gallary.length) {
-      setHasMore(false);
-      return;
-    }
-  };
-
   return (
     <Fragment>
-      <div className="mt-2">
-        <InfiniteScroll
-          dataLength={gallary.length}
-          next={fetchMoreData}
-          hasMore={hasMore}
-          loader={<h4>Loading...</h4>}
-          endMessage={
-            <p style={{ textAlign: 'center' }}>
-              <b>Yay! You have seen it all</b>
-            </p>
-          }>
-          <MasonryGallary>
-            {items.map((item) => (
-              <GallaryItem
-                key={item.id}
-                src={item.src}
-                title={item.category}
-                video={item.video}
-              />
-            ))}
-          </MasonryGallary>
-        </InfiniteScroll>
-      </div>
+      <SimpleReactLightbox>
+        <SRLWrapper>
+          <div className="mt-2">
+            <MasonryGallary>
+              {gallary.map((item) => (
+                <GallaryItem
+                  key={item.id}
+                  src={item.src}
+                  title={item.category}
+                  video={item.video}
+                />
+              ))}
+            </MasonryGallary>
+          </div>
+        </SRLWrapper>
+      </SimpleReactLightbox>
     </Fragment>
   );
 };

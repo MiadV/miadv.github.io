@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, Suspense, lazy } from 'react';
 // Mui
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
@@ -9,9 +9,9 @@ import Tabs from '@material-ui/core/Tabs';
 // components
 import HeroSection from '../../components/HeroSection';
 import ProfileCard from '../../components/ProfileCard';
-import CV from './CV';
-import Projects from './Projects';
-import Gallary from './Gallary';
+const CV = lazy(() => import('./CV'));
+const Projects = lazy(() => import('./Projects'));
+const Gallary = lazy(() => import('./Gallary'));
 
 const Home = () => {
   const [currentTab, setCurrentTab] = useState(0);
@@ -43,15 +43,17 @@ const Home = () => {
             </Tabs>
           </Card>
           {/* CV */}
-          <TabPanel value={currentTab} index={0} className="my-3">
-            <CV />
-          </TabPanel>
-          <TabPanel value={currentTab} index={1} className="my-3">
-            <Projects />
-          </TabPanel>
-          <TabPanel value={currentTab} index={2} className="my-3">
-            <Gallary />
-          </TabPanel>
+          <Suspense fallback={<div>Loading...</div>}>
+            <TabPanel value={currentTab} index={0} className="my-3">
+              <CV />
+            </TabPanel>
+            <TabPanel value={currentTab} index={1} className="my-3">
+              <Projects />
+            </TabPanel>
+            <TabPanel value={currentTab} index={2} className="my-3">
+              <Gallary />
+            </TabPanel>
+          </Suspense>
         </Grid>
       </Grid>
     </Container>

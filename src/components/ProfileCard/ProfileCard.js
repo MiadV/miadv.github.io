@@ -7,6 +7,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 import Github from 'mdi-material-ui/Github';
 import Instagram from 'mdi-material-ui/Instagram';
 import Facebook from 'mdi-material-ui/Facebook';
+import Whatsapp from 'mdi-material-ui/Whatsapp';
 
 const ProfileCard = () => {
   return (
@@ -54,10 +55,9 @@ const ProfileCard = () => {
       </div>
 
       <p className="text-black-50 my-3">
-        Despite my field of study, I’m a web developer who has been doing web
-        development since 2015. I have done many project including yet not
-        limited to eCommerce(WordPress CMS) and static websites(React-js) as
-        well as access databases.
+        I’m a self-taught programmer with high enthusiasm for new technologies.
+        I have done many project including yet not limited to eCommerce, Static
+        websites and Managment systems as well as MS Access databases.
       </p>
 
       <div className="font-size-sm p-3 bg-light rounded-sm">
@@ -97,6 +97,14 @@ const ProfileCard = () => {
             variant="outlined"
             className="d-50 m-2 text-facebook">
             <Facebook />
+          </IconButton>
+        </Tooltip>
+        <Tooltip arrow title="Whatsapp">
+          <IconButton
+            href="https://api.whatsapp.com/send?phone=60173677473&text=Hi%20Miad%20I%20found%20this%20number%20on%20your%20portfolio"
+            variant="outlined"
+            className="d-50 m-2 text-whatsapp">
+            <Whatsapp />
           </IconButton>
         </Tooltip>
       </div>
