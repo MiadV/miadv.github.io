@@ -1,5 +1,7 @@
 import React, { Component, Suspense } from 'react';
 import { BrowserRouter } from 'react-router-dom';
+import ReactGA from 'react-ga';
+import { createBrowserHistory } from 'history';
 // Mui
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/styles';
@@ -10,6 +12,14 @@ import ErrorBoundary from './utils/ErrorBoundary';
 import './assets/base.scss';
 //  Components
 import Home from './pages/Home';
+
+//  Google tracking
+ReactGA.initialize('UA-124189379-5');
+const history = createBrowserHistory();
+// Initialize google analytics page view tracking
+history.listen((location) => {
+  ReactGA.pageview(location.pathname); // Record a pageview for the given page
+});
 
 class App extends Component {
   render() {
